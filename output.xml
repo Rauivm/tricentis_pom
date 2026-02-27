@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.12.10 on win32)" generated="2026-02-27T12:42:26.088701" rpa="false" schemaversion="5">
+<suite id="s1" name="Vehicle Tests" source="c:\robotframework\tricentis_pom\suites\vehicle_tests.robot">
+<kw name="Abrir navegador" owner="config" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-27T12:42:26.342143" level="INFO">Opening browser 'chrome' to base url 'https://sampleapp.tricentis.com/101/app.php'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-27T12:42:26.340203" elapsed="2.951068"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-27T12:42:29.291271" elapsed="0.024877"/>
+</kw>
+<status status="PASS" start="2026-02-27T12:42:26.340203" elapsed="2.975945"/>
+</kw>
+<test id="s1-t1" name="CT01 - BMW 15000km" line="15">
+<kw name="Criar seguro para 'automobile'" owner="vehicle_data_flow" source_name="Criar seguro para '${tipo_veiculo}'">
+<kw name="Selecionar '${tipo_veiculo}' no menu de navegação" owner="vehicle_data_page" source_name="Selecionar '${vehicle}' no menu de navegação">
+<kw name="Replace String" owner="String">
+<msg time="2026-02-27T12:42:29.319180" level="INFO">${elemento} = //*[@id="nav_automobile"]</msg>
+<var>${elemento}</var>
+<arg>${nav_vehicle}</arg>
+<arg>{vehicle}</arg>
+<arg>${vehicle}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2026-02-27T12:42:29.319180" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-27T12:42:29.319180" level="INFO">Clicking element '//*[@id="nav_automobile"]'.</msg>
+<arg>${elemento}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-27T12:42:29.319180" elapsed="0.284728"/>
+</kw>
+<status status="PASS" start="2026-02-27T12:42:29.316148" elapsed="0.287760"/>
+</kw>
+<kw name="Executar preenchimento do tipo '${tipo_veiculo}'" owner="vehicle_factory" source_name="Executar preenchimento do tipo '${tipo_veiculo}'">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="Preencher automobile" owner="automobile_flow">
+<kw name="Selecionar marca do veículo" owner="vehicle_data_page">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-02-27T12:42:29.607907" level="INFO">Selecting options from selection list 'id=make' by label BMW.</msg>
+<arg>${MAKE_SELECT}</arg>
+<arg>${marca}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-02-27T12:42:29.606908" elapsed="0.075140"/>
+</kw>
+<arg>${veiculo.marca}</arg>
+<status status="PASS" start="2026-02-27T12:42:29.606908" elapsed="0.075667"/>
+</kw>
+<kw name="Informar potência do motor" owner="vehicle_data_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-27T12:42:29.683617" level="INFO">Typing text '120' into text field 'id=engineperformance'.</msg>
+<arg>${ENGINE_INPUT}</arg>
+<arg>${potencia}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-27T12:42:29.683617" elapsed="0.066828"/>
+</kw>
+<arg>${veiculo.potencia}</arg>
+<status status="PASS" start="2026-02-27T12:42:29.682575" elapsed="0.067870"/>
+</kw>
+<kw name="Informar data de fabricação" owner="vehicle_data_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-27T12:42:29.751445" level="INFO">Typing text '01/01/2024' into text field 'id=dateofmanufacture'.</msg>
+<arg>${DATE_INPUT}</arg>
+<arg>${data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-27T12:42:29.751445" elapsed="0.077795"/>
+</kw>
+<arg>${veiculo.data}</arg>
+<status status="PASS" start="2026-02-27T12:42:29.750445" elapsed="0.078795"/>
+</kw>
+<kw name="Selecionar número de assentos" owner="vehicle_data_page">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-02-27T12:42:29.829240" level="INFO">Selecting options from selection list 'css=select[id^="numberofseats"]' by label 2.</msg>
+<arg>${SEATS_SELECT}</arg>
+<arg>${assentos}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-02-27T12:42:29.829240" elapsed="0.050028"/>
+</kw>
+<arg>${veiculo.assentos}</arg>
+<status status="PASS" start="2026-02-27T12:42:29.829240" elapsed="0.050028"/>
+</kw>
+<kw name="Selecionar tipo de combustível" owner="vehicle_data_page">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-02-27T12:42:29.884276" level="INFO">Selecting options from selection list 'id=fuel' by label Petrol.</msg>
+<arg>${FUEL_SELECT}</arg>
+<arg>${combustivel}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-02-27T12:42:29.879268" elapsed="0.054642"/>
+</kw>
+<arg>${veiculo.combustivel}</arg>
+<status status="PASS" start="2026-02-27T12:42:29.879268" elapsed="0.054642"/>
+</kw>
+<kw name="Informar preço de tabela" owner="vehicle_data_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-27T12:42:29.934944" level="INFO">Typing text '50000' into text field 'id=listprice'.</msg>
+<arg>${PRICE_INPUT}</arg>
+<arg>${preco}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-27T12:42:29.934944" elapsed="0.054228"/>
+</kw>
+<arg>${veiculo.preco}</arg>
+<status status="PASS" start="2026-02-27T12:42:29.934944" elapsed="0.054228"/>
+</kw>
+<kw name="Informar placa" owner="vehicle_data_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-27T12:42:29.990693" level="INFO">Typing text 'ABC1234' into text field 'id=licenseplatenumber'.</msg>
+<arg>${PLATE_INPUT}</arg>
+<arg>${placa}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-27T12:42:29.990693" elapsed="0.057377"/>
+</kw>
+<arg>${veiculo.placa}</arg>
+<status status="PASS" start="2026-02-27T12:42:29.990693" elapsed="0.058377"/>
+</kw>
+<kw name="Informar quilometragem anual" owner="vehicle_data_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-27T12:42:30.050070" level="INFO">Typing text '15000' into text field 'id=annualmileage'.</msg>
+<arg>${KM_INPUT}</arg>
+<arg>${km}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-27T12:42:30.049070" elapsed="0.075287"/>
+</kw>
+<arg>${veiculo.km}</arg>
+<status status="PASS" start="2026-02-27T12:42:30.049070" elapsed="0.075287"/>
+</kw>
+<arg>${veiculo}</arg>
+<status status="PASS" start="2026-02-27T12:42:29.605907" elapsed="0.518450"/>
+</kw>
+<arg>Preencher ${tipo_veiculo}</arg>
+<arg>${veiculo}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2026-02-27T12:42:29.605907" elapsed="0.518450"/>
+</kw>
+<arg>${veiculo}</arg>
+<status status="PASS" start="2026-02-27T12:42:29.604908" elapsed="0.519449"/>
+</kw>
+<kw name="Capturar tela" owner="capturar_page">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-27T12:42:30.126358" level="INFO">${nomeArquivoTela} = NONE</msg>
+<var>${nomeArquivoTela}</var>
+<arg>NONE</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-27T12:42:30.125358" elapsed="0.001000"/>
+</kw>
+<if>
+<branch type="IF" condition="${GRAVA_TELAS}">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-27T12:42:30.127357" level="INFO">${uuid} = 0e116166-43e7-472a-a862-56896ad94a82</msg>
+<var>${uuid}</var>
+<arg>str(uuid.uuid4())</arg>
+<arg>modules=uuid</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-27T12:42:30.127357" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-27T12:42:30.128358" level="INFO">${inc} = 1</msg>
+<var>${inc}</var>
+<arg>${num_captura_tela} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-27T12:42:30.127357" elapsed="0.001001"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2026-02-27T12:42:30.129357" level="INFO">${num_captura_tela} = 1</msg>
+<arg>${num_captura_tela}</arg>
+<arg>${inc}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2026-02-27T12:42:30.128358" elapsed="0.000999"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-27T12:42:30.129357" level="INFO">${nomeArquivoTela} = 1_dados do veículo preenchidos_0e116166-43e7-472a-a862-56896ad94a82.png</msg>
+<var>${nomeArquivoTela}</var>
+<arg>${inc}_${argNomeEtapa}_${uuid}.png</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-27T12:42:30.129357" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="selenium_wrapper">
+<msg time="2026-02-27T12:42:30.292213" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="1_dados%20do%20ve%C3%ADculo%20preenchidos_0e116166-43e7-472a-a862-56896ad94a82.png"&gt;&lt;img src="1_dados%20do%20ve%C3%ADculo%20preenchidos_0e116166-43e7-472a-a862-56896ad94a82.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${nomeArquivoTela}</arg>
+<status status="PASS" start="2026-02-27T12:42:30.130358" elapsed="0.161855"/>
+</kw>
+<status status="PASS" start="2026-02-27T12:42:30.126358" elapsed="0.165855"/>
+</branch>
+<status status="PASS" start="2026-02-27T12:42:30.126358" elapsed="0.165855"/>
+</if>
+<return>
+<value>${nomeArquivoTela}</value>
+<status status="PASS" start="2026-02-27T12:42:30.292213" elapsed="0.000000"/>
+</return>
+<arg>dados do veículo preenchidos</arg>
+<status status="PASS" start="2026-02-27T12:42:30.125358" elapsed="0.166855"/>
+</kw>
+<kw name="Clicar em próximo" owner="vehicle_data_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-27T12:42:30.292213" level="INFO">Clicking element 'id=nextenterinsurantdata'.</msg>
+<arg>${NEXT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-27T12:42:30.292213" elapsed="0.057664"/>
+</kw>
+<status status="PASS" start="2026-02-27T12:42:30.292213" elapsed="0.058664"/>
+</kw>
+<arg>${vehicle_data}[0]</arg>
+<status status="PASS" start="2026-02-27T12:42:29.316148" elapsed="1.034729"/>
+</kw>
+<status status="PASS" start="2026-02-27T12:42:29.316148" elapsed="1.034729"/>
+</test>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="Fechar navegador" owner="config">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-27T12:42:30.352876" elapsed="2.091264"/>
+</kw>
+<status status="PASS" start="2026-02-27T12:42:30.352876" elapsed="2.091264"/>
+</kw>
+<kw name="Criar Pdf De Screenshots" owner="keywords_pdf">
+<arg>${OUTPUT DIR}</arg>
+<arg>PDFs/${PREV_TEST_STATUS}/${PREV_TEST_NAME}.pdf</arg>
+<arg>${PREV_TEST_STATUS}</arg>
+<arg>${PREV_TEST_NAME}</arg>
+<status status="PASS" start="2026-02-27T12:42:32.444140" elapsed="0.065331"/>
+</kw>
+<arg>Fechar navegador</arg>
+<arg>AND</arg>
+<arg>Criar Pdf De Screenshots</arg>
+<arg>${OUTPUT DIR}</arg>
+<arg>PDFs/${PREV_TEST_STATUS}/${PREV_TEST_NAME}.pdf</arg>
+<arg>${PREV_TEST_STATUS}</arg>
+<arg>${PREV_TEST_NAME}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2026-02-27T12:42:30.351876" elapsed="2.157595"/>
+</kw>
+<status status="PASS" start="2026-02-27T12:42:26.091907" elapsed="6.417564"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Vehicle Tests" id="s1" pass="1" fail="0" skip="0">Vehicle Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

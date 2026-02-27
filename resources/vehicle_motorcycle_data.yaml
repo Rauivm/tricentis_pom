@@ -1,0 +1,22 @@
+vehicle_motorcycle_data:
+- nome_teste: CT01 - BMW 15000km
+  marca: BMW
+  modelo: Scooter
+  cilindrada: 1000
+  potencia: 120
+  data: 01/01/2024
+  assentos: 2
+  preco: 50000
+  km: 15000
+
+- nome_teste: CT02 - Audi 30000km
+  marca: Audi
+  modelo: Scooter
+  cilindrada: 1000
+  potencia: 120
+  data: 01/01/2024
+  assentos: 2
+  combustivel: Petrol
+  preco: 50000
+  placa: XYZ9876
+  km: 30000
