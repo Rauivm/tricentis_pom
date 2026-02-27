@@ -13,7 +13,6 @@ Suite Teardown     Run Keywords
 ...    AND    Criar Pdf De Screenshots    ${OUTPUT DIR}    PDFs/${PREV_TEST_STATUS}/${PREV_TEST_NAME}.pdf    ${PREV_TEST_STATUS}    ${PREV_TEST_NAME}
 
 *** Test Cases ***
-*** Test Cases ***
 CT01 - BMW 15000km
 [Tags]    ${veiculo.tipo}
     ${vehicle_automobile_data}[0]
