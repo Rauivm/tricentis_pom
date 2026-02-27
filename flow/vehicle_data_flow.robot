@@ -1,10 +1,19 @@
 *** Settings ***
-Resource    ../pages/vehicle_data_page.robot
+Library    ../utils/vehicle_executor.py
 Library    ../utils/selenium_wrapper.py
-Resource    ../utils/ui_commands.robot
-Resource    ../pages/vehicle_factory.robot
 
+Resource    ../pages/vehicle_data_page.robot
+Resource    ../utils/ui_commands.robot
 *** Keywords ***
+
+Criar seguro para o veículo
+    [Arguments]    ${veiculo}
+    Selecionar '${veiculo.tipo}' no menu de navegação
+    Preencher Veiculo    ${veiculo}
+    Capturar tela    dados preenchidos
+    Clicar em próximo
+
+
 Criar seguro para '${tipo_veiculo}'
     [Arguments]    ${veiculo}
     Selecionar '${tipo_veiculo}' no menu de navegação

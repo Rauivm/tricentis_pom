@@ -1,10 +1,11 @@
 vehicle_motorcycle_data:
 - nome_teste: CT01 - BMW 15000km
+  tipo: motorcycle
   marca: BMW
   modelo: Scooter
   cilindrada: 1000
   potencia: 120
-  data: 01/01/2024
+  data_fabricacao: 01/01/2024
   assentos: 2
   preco: 50000
   km: 15000
@@ -14,7 +15,7 @@ vehicle_motorcycle_data:
   modelo: Scooter
   cilindrada: 1000
   potencia: 120
-  data: 01/01/2024
+  data_fabricacao: 01/01/2024
   assentos: 2
   combustivel: Petrol
   preco: 50000
