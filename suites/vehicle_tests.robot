@@ -15,8 +15,10 @@ Suite Teardown     Run Keywords
 *** Test Cases ***
 *** Test Cases ***
 CT01 - BMW 15000km
+[Tags]    ${veiculo.tipo}
     ${vehicle_automobile_data}[0]
 
 
 CT02 - Honda 5000km
+[Tags]    ${veiculo.tipo}
     ${vehicle_motorcycle_data}[0]
