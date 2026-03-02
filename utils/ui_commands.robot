@@ -5,6 +5,14 @@ Resource         ../resources/locators_globais.robot
 
 *** Keywords ***
 
+Clicar em seguir para '${proxima_pagina}'
+
+    ${pagina}=    Evaluate    "${proxima_pagina}".lower().replace(" ", "")
+    ${locator}=   Replace String    ${next_button}    {page}    ${pagina}
+
+    Wait Until Element Is Visible    ${locator}    10s
+    Click Element                    ${locator} 
+
 Validar campo
     [Arguments]    ${locator}    ${valor_esperado}    ${tipo}
 

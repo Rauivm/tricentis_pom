@@ -48,5 +48,5 @@ Informar quilometragem anual
     [Arguments]    ${km}
     Input Text    ${KM_INPUT}    ${km}
 
-Clicar em próximo
-    Click Element    ${NEXT_BUTTON}
+#Clicar em seguir para 'Enter Insurant Data'
+#    Click Element    ${next_button}

@@ -32,3 +32,4 @@ Preencher dados do segurado
     Escolher Foto                  ${segurado["nome_do_arquivo"]}
 
     Capturar tela    insurant preenchido
+    Clicar em seguir para 'Enter Product Data'

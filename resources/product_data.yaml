@@ -1,0 +1,7 @@
+product_data:
+  - start_date_offset_days: 10
+    insurance_sum: "3.000.000,00"
+    merit_rating: "Bonus 1"
+    damage_insurance: "Full Coverage"
+    optional_products: ["Euro Protection", "Legal Defense Insurance"]
+    courtesy_car: "Yes"

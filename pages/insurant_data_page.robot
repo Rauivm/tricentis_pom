@@ -1,8 +1,10 @@
 *** Settings ***
 Library    ../utils/data_generator.py
 Library    String
+Library    SeleniumLibrary
 Resource   ../pages/insurant_data_page.robot
 Resource   ../resources/locators_insurant.robot
+Resource    ../resources/locators_globais.robot
 Resource   ../utils/ui_commands.robot
 *** Keywords ***
 Informar primeiro nome
@@ -51,7 +53,7 @@ Clicar em seguir para dados do produto
 
 Escolher Foto
     [Arguments]    ${nome_do_arquivo}
-    Click Button    ${choose_file}
+    #Click Button    ${choose_file}
     Inserir arquivo '${nome_do_arquivo}'
 
 Selecionar Hobbies

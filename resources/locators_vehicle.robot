@@ -10,4 +10,3 @@ ${FUEL_SELECT}    id=fuel
 ${PRICE_INPUT}    id=listprice
 ${PLATE_INPUT}    id=licenseplatenumber
 ${KM_INPUT}    id=annualmileage
-${NEXT_BUTTON}    id=nextenterinsurantdata
