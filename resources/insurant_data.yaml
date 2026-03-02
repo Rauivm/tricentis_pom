@@ -1,0 +1,6 @@
+insurant_data:
+  - genero: Male
+    pais: Brazil
+    ocupacao: Employee
+    hobbies: ["Speeding", "Bungee Jumping"]
+    nome_do_arquivo: insurant_photo

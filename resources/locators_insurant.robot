@@ -1,0 +1,16 @@
+*** Variables ***
+${first_name}          //*[@id="firstname"]
+${last_name}           //*[@id="lastname"]
+${birth_date}          //*[@id="birthdate"]
+${email}               //*[@id="email"]
+${phone}               //*[@id="phone"]
+${street_address}      //*[@id="streetaddress"]
+${city}                //*[@id="city"]
+${zip_code}            //*[@id="zipcode"]
+${gender}    //input[@name="Gender" and translate(@value,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')="{description}"]/parent::label
+${occupation}       //*[@id="occupation"]
+${country}          //*[@id="country"]
+${hobbies}          //label[normalize-space()="{description}"]
+${website}          //*[@id="website"]
+${picture}          //*[@id="open"]
+${next_button}      //*[@id="nextenterproductdata"]

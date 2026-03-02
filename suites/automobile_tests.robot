@@ -3,10 +3,12 @@ Library          SeleniumLibrary
 Library          ../utils/vehicle_executor.py
 Library          ../utils/keywords_pdf.py
 Resource         ../flow/vehicle_data_flow.robot
+Resource         ../flow/insurant_data_flow.robot
 Resource         ../resources/config.robot
 Variables        ../resources/vehicle_automobile_data.yaml
+Variables        ../resources/insurant_data.yaml
 
-Test Template    Criar seguro para o veículo
+#Test Template    Criar seguro para o veículo
 
 Suite Setup      Abrir navegador
 Suite Teardown        Run Keywords
@@ -16,4 +18,5 @@ Suite Teardown        Run Keywords
 *** Test Cases ***
 CT01 - BMW 15000km
     [Tags]    automobile
-    ${vehicle_automobile_data}[0]
+    Criar seguro para o veículo          ${vehicle_automobile_data}[0]
+    Preencher dados do segurado          ${insurant_data}[0]
