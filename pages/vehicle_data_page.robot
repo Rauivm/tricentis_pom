@@ -47,6 +47,3 @@ Informar placa
 Informar quilometragem anual
     [Arguments]    ${km}
     Input Text    ${KM_INPUT}    ${km}
-
-#Clicar em seguir para 'Enter Insurant Data'
-#    Click Element    ${next_button}

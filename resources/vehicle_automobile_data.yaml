@@ -9,3 +9,14 @@ vehicle_automobile_data:
     preco: 50000
     placa: ABC1234
     km: 15000
+
+  - nome_teste: CT02 - BMW 30000km
+    tipo: automobile
+    marca: BMW
+    potencia: 120
+    data_fabricacao: 01/01/2024
+    assentos: 2
+    combustivel: Petrol
+    preco: 50000
+    placa: ABC1234
+    km: 30000

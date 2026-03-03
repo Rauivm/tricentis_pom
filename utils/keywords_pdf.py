@@ -10,7 +10,7 @@ def capa(height, c):
     y = height - 15
     page_width = letter[0]
 
-    # image_path = os.path.join("Images", "logo_brb.jpg")
+    # image_path = os.path.join("Images", "logo_.jpg")
 
     image_width = 120  
     image_height = 70
@@ -42,7 +42,7 @@ def capa(height, c):
     c.drawString(x, y, subheader_text)
     y -= 20
 
-    # image_path = os.path.join("Images", "logo_montreal.png")
+    # image_path = os.path.join("Images", "logo_.png")
 
     image_width = 120
     image_height = 70
@@ -127,20 +127,19 @@ def criar_pdf_de_screenshots(screenshots_dir, output_pdf_path, status_test, test
         x = col * image_width + (col + 1) * padding
         y = height - (row + 1) * image_height - (row + 1) * padding
  
-        img = Image.open(image_path)
-        img_width, img_height = img.size
- 
-        aspect = img_width / img_height
+        with Image.open(image_path) as img:
+            img_width, img_height = img.size
+            aspect = img_width / img_height
 
-        max_width = width - 60
-        max_height = height - 140
+            max_width = width - 80
+            max_height = height - 120
 
-        if aspect > 1:
-            new_width = max_width
-            new_height = max_width / aspect
-        else:
-            new_height = max_height
-            new_width = max_height * aspect
+            if aspect > 1:
+                new_width = max_width
+                new_height = max_width / aspect
+            else:
+                new_height = max_height
+                new_width = max_height * aspect
 
         x_centered = (width - new_width) / 2
         y_centered = (height - new_height) / 2 - 20
