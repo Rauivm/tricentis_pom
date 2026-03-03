@@ -9,3 +9,5 @@ ${choose_file}           //*[@id="open"]
 
 #BOTÃO PARA AVANÇAR PÁGINA
 ${next_button}    xpath=//button[@id="next{page}"]
+
+${step_counter}    xpath=//a[@id="{step_id}"]//span[contains(concat(' ', normalize-space(@class), ' '), ' counter ')]
